@@ -22,7 +22,7 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
-            if (index < 7) {
+            if (index < 6) {
               return (
                 <div className="col" key={index}>
                   <WeatherForecastDay data={dailyForecast} />
@@ -34,7 +34,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
+    let apiKey = "ad793a6d772939c31783de5822791acf";
     let lat = props.coord.lat;
     let lon = props.coord.lon;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
